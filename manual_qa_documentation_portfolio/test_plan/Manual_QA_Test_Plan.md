@@ -2,8 +2,8 @@
 
 **Document version:** 1.0  
 **Status:** Sample plan for a fictional application  
-**Prepared by:** [Your name]  
-**Date:** [Enter date]
+**Prepared by:** Yidnekachew Tafese
+**Date:** Oct-01-2026
 
 ## 1. Purpose
 Define the scope, strategy, resources, risks, and completion criteria for manual testing of a fictional e-commerce web application.
@@ -47,10 +47,10 @@ Testing will be performed manually using requirement-based, positive, negative, 
 
 ## 6. Test Environment
 - Application URL: [Enter authorized demo URL]
-- Browser(s): [e.g., Chrome, Firefox]
-- OS: [Enter OS]
+- Browser(s): Chrome, Firefox, edge
+- OS: windows OS, Mac OS, Android OS, iOS OS
 - Viewports: desktop and mobile-sized viewport
-- Test account: [Use a demo account only, if required]
+- Test account:
 - Test data: fictional product names and non-sensitive sample checkout values
 
 ## 7. Entry Criteria
