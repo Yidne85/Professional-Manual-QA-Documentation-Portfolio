@@ -1,0 +1,41 @@
+﻿Test Case ID,Module,Test Case Title,Priority,Preconditions,Test Data,Steps,Expected Result,Test Type,Actual Result,Status,Defect ID,Evidence
+TC-001,Product Listing,Verify product listing loads,High,Application is available,None,1. Open the product listing page,Product list is displayed without blocking errors,Functional,,,,
+TC-002,Product Details,Open a product details page,High,Product listing is visible,Select a listed product,"1. Click a product
+2. Review the details page","Correct product name, price, image, and description are displayed",Functional,,,,
+TC-003,Search,Search for an existing product,High,Search control is available,A known product name,"1. Enter the product name
+2. Submit search",Matching product(s) are shown,Functional,,,,
+TC-004,Search,Search for a product that does not exist,Medium,Search control is available,Unmatched string: QZ-NO-MATCH-999,"1. Enter unmatched text
+2. Submit search",No-results message is displayed and the page remains usable,Negative,,,,
+TC-005,Filtering,Filter products by category,Medium,Product listing has category filter,A category that has products,"1. Select a category
+2. Apply filter if required",Only products matching the selected category are displayed,Functional,,,,
+TC-006,Cart,Add a product to the cart,High,Product is available,One in-stock product,"1. Click Add to Cart
+2. Open cart",Selected product appears in cart with correct name and price,Functional,,,,
+TC-007,Cart,Add the same product twice,Medium,Product can be added to cart,One in-stock product,"1. Add product
+2. Add the same product again
+3. Open cart",Behavior follows the defined requirement: quantity increments or separate lines are shown consistently,Functional,,,,
+TC-008,Cart,Update item quantity to a valid value,High,Cart contains one item,Quantity: 2,"1. Change quantity to 2
+2. Update cart",Quantity updates and subtotal/total recalculate correctly,Functional,,,,
+TC-009,Cart,Attempt invalid quantity,Medium,Cart contains one item,Quantity: 0 or -1,"1. Enter invalid quantity
+2. Update cart",Invalid quantity is rejected or corrected according to requirements; totals remain valid,Negative/Boundary,,,,
+TC-010,Cart,Remove an item from the cart,High,Cart contains at least one item,Existing cart item,"1. Click Remove
+2. Review cart",Item is removed and totals update correctly,Functional,,,,
+TC-011,Cart,Verify subtotal calculation,High,Cart contains a product,Unit price P; quantity Q,"1. Set quantity to Q
+2. Calculate displayed subtotal","Subtotal equals P × Q, using the application's currency/rounding rules",Calculation,,,,
+TC-012,Checkout,Submit checkout with required fields empty,High,Cart contains at least one item,Empty checkout form,"1. Open checkout
+2. Leave required fields empty
+3. Submit",Submission is blocked and clear validation messages identify required fields,Negative,,,,
+TC-013,Checkout,Validate email format,Medium,Checkout form is available,Email: invalid-email,"1. Enter invalid email
+2. Complete other required fields
+3. Submit",Invalid email is rejected with a clear message,Negative,,,,
+TC-014,Checkout,Complete checkout with valid demo data,High,Cart contains an item; checkout form is available,"Fictional name, valid-format email, demo address; no real payment","1. Enter valid demo details
+2. Submit checkout",Order confirmation is shown and order summary matches cart,End-to-end,,,,
+TC-015,Checkout,Prevent duplicate submission on repeated click,Medium,Checkout form is completed with demo data,Valid demo details,"1. Submit checkout
+2. Click submit again quickly if UI permits",Duplicate orders are prevented or handled according to requirements,Negative,,,,
+TC-016,Navigation,Navigate back from product details,Low,Product details page is open,None,1. Use Back to Products or browser Back,User returns to listing without unexpected error,Usability,,,,
+TC-017,UI/Responsive,Check key page content at mobile viewport,Medium,Application is available,Viewport approx. 390 × 844,"1. Set mobile viewport
+2. Open listing, cart, checkout",Content and primary controls remain visible and usable without unintended overlap,UI/Responsive,,,,
+TC-018,Regression,Complete core purchase journey,High,Application is available and cart is empty,One product and fictional checkout data,"1. Browse products
+2. Open details
+3. Add to cart
+4. Update quantity
+5. Complete demo checkout","Core journey completes and displayed product, quantity, and totals remain consistent",Regression/E2E,,,,
